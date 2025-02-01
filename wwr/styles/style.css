@@ -1,0 +1,157 @@
+/*--------------------------------------------------
+  1. Container for the Entire Page
+--------------------------------------------------*/
+#content {
+    max-width: 1600px;
+    margin: 0 auto; /* Centers the page horizontally */
+  }
+  
+  /*--------------------------------------------------
+    2. Background Colors
+  --------------------------------------------------*/
+  
+  /* Body background */
+  body {
+    background-color: #fcfbfb; /* Replace with your chosen off-white */
+  }
+  
+  /* Header background (semi-transparent for hero image visibility) */
+  header {
+    background-color: rgba(20, 30, 13, 0.7);
+  }
+  
+  /* Hover state for navigation links */
+  nav a:hover {
+    background-color: black;
+  }
+  
+  /* Button (or call-to-action) backgrounds */
+  .book,
+  .join {
+    background-color: #007bff; /* Example blue - adjust as needed */
+  }
+  
+  .book:hover,
+  .join:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  /* Background container behind the message area */
+  #background {
+    height: 725px;
+    background-color: #f0f0f0; /* Example light gray background */
+  }
+  
+  /* Message section background */
+  .msg {
+    background-color: #e2e2e2; /* Example background color */
+  }
+  
+  /* Footer background */
+  footer {
+    background-color: #333333;
+  }
+  
+  /*--------------------------------------------------
+    3. Foreground (Text) Colors
+  --------------------------------------------------*/
+  
+  /* Navigation link text colors */
+  nav a {
+    color: #fcfbfb; /* Light text for contrast */
+  }
+  
+  /* Navigation hover state text color */
+  nav a:hover {
+    color: #d9c2a3;
+  }
+  
+  /* Headings or titles (if using .home-title or h4) */
+  .home-title,
+  h4 {
+    color: #333333; /* Example dark text */
+  }
+  
+  /* Button text colors */
+  .book,
+  .join {
+    color: #ffffff;
+  }
+  
+  .book:hover,
+  .join:hover {
+    color: #d9c2a3;
+  }
+  
+  /* Message section text colors */
+  .msg h2 {
+    color: #333333;
+  }
+  
+  .msg p {
+    color: #333333;
+  }
+  
+  /* Footer text and links */
+  footer {
+    color: #ffffff;
+  }
+  
+  footer a {
+    color: #ffffff;
+    text-decoration: none; /* Remove underline by default */
+  }
+  
+  /* Footer link hover (adds underline) */
+  footer p a:hover {
+    text-decoration: underline;
+  }
+  
+  /*--------------------------------------------------
+    4. Centering Content
+  --------------------------------------------------*/
+  
+  /* Center text within specific elements */
+  nav a,
+  #hero-msg h1,
+  #hero-msg h4,
+  .button-box,
+  main section {
+    text-align: center;
+  }
+  
+  /*--------------------------------------------------
+    5. Image and Icon Widths
+  --------------------------------------------------*/
+  
+  /* Logo and card icon widths */
+  .logo,
+  .icon {
+    width: 80px;
+  }
+  
+  /* Hero image should span the full width of its container */
+  #hero-img {
+    width: 100%;
+    display: block; /* Eliminates any extra space below the image */
+  }
+  
+  /*--------------------------------------------------
+    6. Link Decoration (Underlines)
+  --------------------------------------------------*/
+  
+  /* Remove default underlines for these links */
+  nav a,
+  .book,
+  .join,
+  footer a {
+    text-decoration: none;
+  }
+  
+  /*--------------------------------------------------
+    7. Footer Font Size
+  --------------------------------------------------*/
+  footer p {
+    font-size: 1.2em;
+  }
+  
