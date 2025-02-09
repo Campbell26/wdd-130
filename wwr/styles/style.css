@@ -1,157 +1,218 @@
 /*--------------------------------------------------
+  @import Statements for Google Fonts
+  (These must always come first!)
+--------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt');
+
+/*--------------------------------------------------
   1. Container for the Entire Page
 --------------------------------------------------*/
 #content {
     max-width: 1600px;
     margin: 0 auto; /* Centers the page horizontally */
-  }
-  
-  /*--------------------------------------------------
-    2. Background Colors
-  --------------------------------------------------*/
-  
-  /* Body background */
-  body {
+}
+
+/*--------------------------------------------------
+  2. Background Colors & Simple Reset
+--------------------------------------------------*/
+
+/* Body background, font settings, and reset */
+body {
     background-color: #fcfbfb; /* Replace with your chosen off-white */
-  }
-  
-  /* Header background (semi-transparent for hero image visibility) */
-  header {
+    font-family: Raleway, Arial, sans-serif;  /* Body font */
+    font-size: 22px;                         /* Increase default font size */
+    margin: 0;                               /* Simple reset */
+    padding: 0;                              /* Simple reset */
+}
+
+/* Header background (semi-transparent for hero image visibility) */
+header {
     background-color: rgba(20, 30, 13, 0.7);
-  }
-  
-  /* Hover state for navigation links */
-  nav a:hover {
+}
+
+/* Hover state for navigation links */
+nav a:hover {
     background-color: black;
-  }
-  
-  /* Button (or call-to-action) backgrounds */
-  .book,
-  .join {
+}
+
+/* Button (or call-to-action) backgrounds and styling */
+.book,
+.join {
     background-color: #007bff; /* Example blue - adjust as needed */
-  }
-  
-  .book:hover,
-  .join:hover {
+    font-size: 18px;           /* Set font size for buttons */
+    padding: 15px 30px;        /* Add padding */
+    margin-top: 50px;          /* Add top margin */
+    border-radius: 5px;        /* Rounded corners */
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.book:hover,
+.join:hover {
     background-color: #0056b3; /* Darker blue on hover */
-  }
-  
-  /* Background container behind the message area */
-  #background {
+    color: #d9c2a3;
+}
+
+/* Background container behind the message area */
+#background {
     height: 725px;
     background-color: #f0f0f0; /* Example light gray background */
-  }
-  
-  /* Message section background */
-  .msg {
+}
+
+/* Message section background and styling */
+.msg {
     background-color: #e2e2e2; /* Example background color */
-  }
-  
-  /* Footer background */
-  footer {
-    background-color: #333333;
-  }
-  
-  /*--------------------------------------------------
-    3. Foreground (Text) Colors
-  --------------------------------------------------*/
-  
-  /* Navigation link text colors */
-  nav a {
-    color: #fcfbfb; /* Light text for contrast */
-  }
-  
-  /* Navigation hover state text color */
-  nav a:hover {
-    color: #d9c2a3;
-  }
-  
-  /* Headings or titles (if using .home-title or h4) */
-  .home-title,
-  h4 {
-    color: #333333; /* Example dark text */
-  }
-  
-  /* Button text colors */
-  .book,
-  .join {
-    color: #ffffff;
-  }
-  
-  .book:hover,
-  .join:hover {
-    color: #d9c2a3;
-  }
-  
-  /* Message section text colors */
-  .msg h2 {
-    color: #333333;
-  }
-  
-  .msg p {
-    color: #333333;
-  }
-  
-  /* Footer text and links */
-  footer {
-    color: #ffffff;
-  }
-  
-  footer a {
-    color: #ffffff;
-    text-decoration: none; /* Remove underline by default */
-  }
-  
-  /* Footer link hover (adds underline) */
-  footer p a:hover {
-    text-decoration: underline;
-  }
-  
-  /*--------------------------------------------------
-    4. Centering Content
-  --------------------------------------------------*/
-  
-  /* Center text within specific elements */
-  nav a,
-  #hero-msg h1,
-  #hero-msg h4,
-  .button-box,
-  main section {
+    padding: 35px;           /* Padding around the message */
+    line-height: 1.5em;      /* More line spacing for readability */
     text-align: center;
-  }
-  
-  /*--------------------------------------------------
-    5. Image and Icon Widths
-  --------------------------------------------------*/
-  
-  /* Logo and card icon widths */
-  .logo,
-  .icon {
+}
+
+.msg p {
+    color: #333333;
+    font-size: 0.8em;        /* Smaller font for paragraphs */
+    padding-bottom: 15px;    /* Padding at the bottom */
+}
+
+.msg .join {
+    margin-top: 20px;
+}
+
+/* Footer background and styling */
+footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 25px 50px;      /* Footer padding */
+    margin-top: 200px;       /* Space above the footer */
+}
+
+/*--------------------------------------------------
+  3. Foreground (Text) Colors
+--------------------------------------------------*/
+
+/* Navigation link text colors and padding */
+nav a {
+    color: #fcfbfb;         /* Light text for contrast */
+    padding: 35px;          /* Space around nav links */
+}
+
+/* Navigation hover state text color */
+nav a:hover {
+    color: #d9c2a3;
+}
+
+/* Headings or titles (if using .home-title or h4) */
+.home-title,
+h4 {
+    color: #333333;         /* Example dark text */
+}
+
+/* Additional styling for .home-title (headline font) */
+.home-title {
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif; /* Headline font */
+    font-size: 2em;             /* Twice the body font size */
+    margin-top: 10px;           /* Margin above the headline */
+}
+
+/* Footer text and links */
+footer a {
+    color: #ffffff;
+    text-decoration: none;  /* Remove underline by default */
+}
+
+/* Footer link hover (adds underline) */
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/*--------------------------------------------------
+  4. Centering Content
+--------------------------------------------------*/
+
+/* Center text within specific elements */
+nav a,
+#hero-msg h1,
+#hero-msg h4,
+.button-box,
+main section {
+    text-align: center;
+}
+
+/*--------------------------------------------------
+  5. Image and Icon Widths
+--------------------------------------------------*/
+
+/* Logo and card icon widths */
+.logo,
+.icon {
     width: 80px;
-  }
-  
-  /* Hero image should span the full width of its container */
-  #hero-img {
+}
+
+/* Hero image should span the full width of its container */
+#hero-img {
     width: 100%;
     display: block; /* Eliminates any extra space below the image */
-  }
-  
-  /*--------------------------------------------------
-    6. Link Decoration (Underlines)
-  --------------------------------------------------*/
-  
-  /* Remove default underlines for these links */
-  nav a,
-  .book,
-  .join,
-  footer a {
+}
+
+/* Card image border */
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+
+/*--------------------------------------------------
+  6. Link Decoration (Underlines)
+--------------------------------------------------*/
+
+/* Remove default underlines for these links */
+nav a,
+.book,
+.join,
+footer a {
     text-decoration: none;
-  }
-  
-  /*--------------------------------------------------
-    7. Footer Font Size
-  --------------------------------------------------*/
-  footer p {
+}
+
+/*--------------------------------------------------
+  7. Footer Font Size
+--------------------------------------------------*/
+footer p {
     font-size: 1.2em;
-  }
-  
+}
+
+/*--------------------------------------------------
+  8. Additional Spacing, Margins, and Box Sizing
+--------------------------------------------------*/
+
+/* Reset margin for all h2 elements */
+h2 {
+    margin: 0;
+}
+
+/* Padding adjustments for various elements */
+#logo_link {
+    padding-top: 5px;
+}
+
+.icon {
+    padding-top: 10px;
+}
+
+/* Footer social images padding */
+footer .social img {
+    padding-top: 15px;
+}
+
+/* Margin adjustments for card sections */
+.rivers-card,
+.camping-card,
+.rapids-card {
+    margin: 200px 0;
+}
+
+/* Box sizing for main section images */
+main section img {
+    box-sizing: border-box;
+}
