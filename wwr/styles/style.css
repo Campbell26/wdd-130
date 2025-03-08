@@ -182,6 +182,58 @@ main section img {
     font-size: 0.8em;
     padding-bottom: 15px;
 }
+/* Rivers Page Specific Styles */
+.rivers-grid {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 20px;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.river-info {
+    grid-column: span 5;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 5px 5px 10px #6f7364;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.river-info h2 {
+    color: #396e94;
+    font-size: 1.8em;
+}
+
+.river-info p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6em;
+}
+
+.river-img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px #6f7364;
+    transition: transform 0.5s ease;
+}
+
+.river-img:hover {
+    transform: scale(1.05);
+}
+
+
+@media screen and (max-width: 900px) {
+    .rivers-grid {
+        display: block;
+    }
+
+    .river-info {
+        margin: 20px auto;
+        width: 90%;
+    }
+}
+
 
 footer {
     background-color: #6f7364; /* Updated from #396e94 to match instructions */
