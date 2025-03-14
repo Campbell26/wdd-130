@@ -282,6 +282,61 @@ footer p {
 footer p a:hover {
     text-decoration: underline;
 }
+/* 🌟 Center form and give it structure */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+/* 🔤 Improve label readability */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* 📌 Style inputs and textarea */
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+/* 🎨 Button styling */
+button {
+    background-color: #e0872e;
+    color: white;
+    padding: 10px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c06c1a;
+}
+
+/* 🎉 Success message styling */
+#feedback {
+    background-color: antiquewhite;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 15px;
+    display: none; /* Hidden until form is submitted */
+}
+
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
