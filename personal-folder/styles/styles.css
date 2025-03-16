@@ -334,7 +334,7 @@ input[type="submit"]:hover {
 
 .team-member p {
     font-size: 14px;
-    margin: 0 0 10px; /* Space before bullet points */
+    margin: 0 0 10px; /* Add space before the list */
 }
 
 .team-member ul {
@@ -343,14 +343,14 @@ input[type="submit"]:hover {
 }
 
 .team-member li {
-    font-size: 14px;
     margin: 5px 0;
-    padding-left: 15px;
+    padding-left: 20px;
     position: relative;
+    text-align: left;
 }
 
 .team-member li:before {
-    content: "•"; /* Bullet point */
+    content: "➤";
     color: #FF8000;
     position: absolute;
     left: 0;
