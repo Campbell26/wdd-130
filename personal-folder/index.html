@@ -1,66 +1,83 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="utf-8">
-        <title>River Run Guides | Fly Fishing Adventures</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Alegreya%7CRoboto" rel="stylesheet">
-        <script src="scripts/modernizr-custom.js"></script>     
-    </head>
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>River Run Guides</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
 
-        <!-- HEADER -->
-        <header class="logoheader">
-            <img src="images/logo-riverun1.png" alt="River Run Guides Logo">
-            <h1>River Run Guides</h1>
-            <h4 class="slogan">Come Live the River Adventure</h4> 
-        </header>
+<header class="logoheader">
+    <img src="images/logo-riverun1.png" alt="River Run Guides Logo">
+    <h1>River Run Guides</h1>
+    <h4 class="slogan">Reel in the Adventure</h4> 
+</header>
 
-        <!-- NAVIGATION -->
-        <nav class="navigation">
-            <button onclick="myFunction()">&#9776;</button>
-            <ul id="primaryNavigation" class="hide">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="trips.html">Guided Trips & Services</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="site-plan.html">Site Plan</a></li>
-            </ul>        
-        </nav>
+<nav class="navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Guided Trips & Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 
-        <!-- HERO SECTION -->
-        <div class="photoFullWidth">
-            <h2 class="homepage-title">World-Class Fly Fishing Adventures</h2>
-            <img src="images/hero-banner.jpg" alt="Scenic River View">
-            <p class="homepageparagraph">Join River Run Guides for an unforgettable fly fishing experience.</p>
+<main>
+    <div class="photoFullWidth">
+        <h2 class="vacationshome">Fly Fishing Adventures in the Rockies</h2>
+        <img src="images/homepage3.jpg" alt="Scenic Fly Fishing">
+        <p class="homepageparagraph">At River Run Guides, we offer unparalleled guided fly fishing trips. Whether you're a seasoned angler or just starting, our experienced guides will ensure an unforgettable experience. Safety, sustainability, and adventure are our top priorities.</p>
+    </div>
+
+    <div>
+        <form>
+            <fieldset>
+                <legend>Request A Quote</legend>
+                <table>
+                    <tr>
+                        <td><label>First Name: <input type="text" name="firstname" required></label></td>
+                        <td><label>Last Name: <input type="text" name="lastname" required></label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email: <input type="email" name="email" required></label></td>
+                        <td><label>Phone: <input type="tel" name="phone" required></label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Address: <input type="text" name="address" required></label></td>
+                        <td><label>Zip Code: <input type="text" name="zipcode" required></label></td>
+                    </tr>
+                    <tr>
+                        <td><label>Group Size: <input type="number" name="groupsize" min="1" max="30" required></label></td>
+                        <td><input type="submit" value="Request A Quote"></td>
+                    </tr>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="adventuregrid">
+        <div>
+            <h2>Guided Fly Fishing Trips</h2>
+            <img src="images/trips12.jpg" alt="Guided Fly Fishing">
+            <p>Explore the best fly fishing spots with expert guides.</p>
         </div>
-
-        <!-- FEATURED SECTIONS -->
-        <div class="feature-grid">
-            <div>
-                <h2>Guided Trips</h2>
-                <a href="trips.html"><img src="images/trips1.jpg" alt="Fly fishing trip"></a>
-                <p>Join expert guides for an immersive fishing adventure.</p>
-            </div>
-            <div>
-                <h2>Meet Our Guides</h2>
-                <a href="about.html"><img src="images/about1.jpg" alt="Our expert guides"></a>
-                <p>Our knowledgeable guides will ensure you have an incredible experience.</p>
-            </div>
-            <div>
-                <h2>Conservation & Sustainability</h2>
-                <img src="images/conservation.jpg" alt="Nature conservation">
-                <p>We are committed to sustainable fishing practices.</p>
-            </div>
+        <div>
+            <h2>Luxury Lodging</h2>
+            <img src="images/trips21.jpg" alt="Luxury Lodging">
+            <p>Stay in our premium riverside cabins after your adventure.</p>
         </div>
+        <div>
+            <h2>Family & Group Packages</h2>
+            <img src="images/group-trip1.jpg" alt="Family Group Fishing">
+            <p>Enjoy a tailored fishing experience for families and groups.</p>
+        </div>
+    </div>
+</main>
 
-        <!-- FOOTER -->
-        <footer>
-            <p>Contact: email@riverrunguides.com | Phone: 123-456-7890</p>
-            <p>&copy; 2024 River Run Guides | <a href="site-plan.html">View Site Plan</a></p>
-        </footer>
+<footer>
+    <p>&copy; 2024 River Run Guides. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+</footer>
 
-    </body>
+</body>
 </html>

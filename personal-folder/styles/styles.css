@@ -1,0 +1,422 @@
+/* === GLOBAL STYLES === */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Alegreya', serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* === HEADER & NAVIGATION === */
+.logoheader {
+    background-color: #0D1F2D; /* Dark Blue */
+    padding: 20px;
+    text-align: center;
+}
+
+.logoheader img {
+    max-width: 120px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.logoheader h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #FF8000; /* Orange */
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 10px 0 5px;
+}
+
+.slogan {
+    font-size: 16px;
+    font-style: italic;
+    color: #FF8000;
+}
+
+/* === NAVIGATION === */
+.navigation {
+    background-color: #0D1F2D;
+    padding: 12px 0;
+    border-bottom: 2px solid #FF8000;
+}
+
+.navigation ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.navigation ul li {
+    display: inline;
+}
+
+.navigation ul li a {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation ul li a:hover {
+    background-color: #FF8000;
+}
+
+/* === FULL-WIDTH PHOTO SECTION (All Pages) === */
+.photoFullWidth {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    background: white; /* White background for the box */
+    border-top: 1px solid #ccc; /* Gray border like reference */
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0; /* Add padding to create space inside the box */
+}
+
+.photoFullWidth img {
+    width: 100%;
+    height: auto; /* Let the image determine the height based on its aspect ratio */
+    display: block;
+    max-height: 540px; /* Cap height to ~500px, allowing full display of 1200x336 */
+}
+
+.vacationshome {
+    background: #FF8000; /* Orange background */
+    color: white; /* White font */
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px; /* Space below the title */
+    display: inline-block; /* Shrink-wrap the background around the text */
+}
+
+.photo-caption {
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 20px; /* Ensure text stays within the box */
+}
+
+/* === HOMEPAGE STYLES === */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.homepageparagraph {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    color: #0D1F2D;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.adventuregrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    padding: 0;
+}
+
+.adventuregrid div {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.adventuregrid div:hover {
+    transform: scale(1.05);
+}
+
+.adventuregrid img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.adventuregrid h2 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #0D1F2D;
+}
+
+.adventuregrid p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* === FORM STYLES (Homepage) === */
+form {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+fieldset {
+    border: 2px solid #FF8000;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF8000;
+    padding: 0 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Alegreya', serif;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #FF8000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin: 10px auto 0;
+}
+
+input[type="submit"]:hover {
+    background-color: #8E926B;
+}
+
+/* === TRIPS PAGE STYLES === */
+.trip-options {
+    max-width: 900px; /* Wider to accommodate side-by-side layout */
+    margin: 20px auto;
+    padding: 0;
+}
+
+/* Individual trip sections */
+.trip-options > div {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ccc; /* Lighter gray like reference */
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Subtler shadow */
+    text-align: left;
+}
+
+.trip-options > div img {
+    width: 100%;
+    height: 100px; /* Reduced from 150px to make smaller */
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Space below image */
+}
+
+.trip-options h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #0D1F2D;
+    margin: 0 0 10px;
+}
+
+.trip-options p {
+    font-size: 16px;
+    margin: 0 0 15px;
+    color: #333;
+}
+
+.trip-options ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.trip-options li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+.trip-options li:before {
+    content: "➤";
+    color: #FF8000;
+    position: absolute;
+    left: 0;
+}
+
+/* Grid layout for trips */
+@media screen and (min-width: 769px) {
+    .trip-options {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Side by side on desktop */
+        gap: 20px; /* Space between cards */
+    }
+}
+
+/* === ABOUT PAGE STYLES === */
+.team-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.team-member {
+    background: white;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
+}
+
+.team-member img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.team-member h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: #0D1F2D;
+}
+
+.team-member p {
+    font-size: 14px;
+    margin: 0 0 10px; /* Space before bullet points */
+}
+
+.team-member ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.team-member li {
+    font-size: 14px;
+    margin: 5px 0;
+    padding-left: 15px;
+    position: relative;
+}
+
+.team-member li:before {
+    content: "•"; /* Bullet point */
+    color: #FF8000;
+    position: absolute;
+    left: 0;
+}
+
+/* === FOOTER === */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0D1F2D;
+    color: white;
+    font-size: 16px;
+}
+
+footer a {
+    color: #FF8000;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #8E926B;
+}
+
+/* === MEDIA QUERIES === */
+@media screen and (max-width: 1024px) {
+    .adventuregrid, .team-section, .trip-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .photoFullWidth img {
+        height: 400px;
+    }
+
+    .vacationshome {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logoheader h1 {
+        font-size: 28px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .navigation ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .photoFullWidth img {
+        height: 300px;
+    }
+
+    .vacationshome {
+        font-size: 24px;
+        padding: 15px;
+    }
+
+    .adventuregrid, .team-section, .trip-options {
+        grid-template-columns: 1fr;
+    }
+
+    form, .trip-options {
+        max-width: 90%;
+    }
+}
