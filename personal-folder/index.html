@@ -25,18 +25,18 @@
 
 <main>
     <div class="photoFullWidth">
-        <h2 class="vacationshome">Fly fishing Adventures in the Rockies</h2>
+        <h2 class="vacationshome">Fly fishing in the Rockies</h2>
         <img src="images/homepage3.jpg" alt="Scenic Fly Fishing">
         <p class="photo-caption">At River Run Guides, we offer unparalleled guided fly fishing trips. Whether you're a seasoned angler or just starting, our experienced guides will ensure an unforgettable experience. Safety, sustainability, and adventure are our top priorities.</p>
     </div>
 
     <div>
-        <form>
+        <form id="quoteForm" onsubmit="return showQuoteConfirmation(event)">
             <fieldset>
                 <legend>Request A Quote</legend>
                 <table>
                     <tr>
-                        <td><label>First Name: <input type="text" name="firstname" required></label></td>
+                        <td><label>First Name: <input type="text" name="firstname" id="firstname" required></label></td>
                         <td><label>Last Name: <input type="text" name="lastname" required></label></td>
                     </tr>
                     <tr>
@@ -73,6 +73,42 @@
             <p>Enjoy a tailored fishing experience for families and groups.</p>
         </div>
     </div>
+
+    <!-- Confirmation Modal -->
+    <div id="quoteConfirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeQuoteConfirmationModal()">×</span>
+            <h2>Quote Request Sent</h2>
+            <p id="quoteConfirmationMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        function showQuoteConfirmation(event) {
+            event.preventDefault(); // Prevent form submission
+            const form = document.getElementById("quoteForm");
+            const firstname = form.querySelector("#firstname").value;
+            const modal = document.getElementById("quoteConfirmationModal");
+            const message = document.getElementById("quoteConfirmationMessage");
+            message.innerHTML = `Hello, ${firstname}! We’re thrilled you requested a quote. Expect to hear from us soon for your next fly fishing adventure!`;
+            modal.style.display = "block";
+            form.reset(); // Clear the form
+            return false;
+        }
+
+        function closeQuoteConfirmationModal() {
+            const modal = document.getElementById("quoteConfirmationModal");
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("quoteConfirmationModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </main>
 
 <footer>

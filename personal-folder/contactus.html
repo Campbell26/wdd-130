@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us | River Run Guides</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+
+<header class="logoheader">
+    <img src="images/logo-riverun1.png" alt="River Run Guides Logo">
+</header>
+
+<nav class="navigation">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="trips.html">Guided Trips & Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contactus.html">Contact Us</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="photoFullWidth">
+        <h2 class="vacationshome">Contact Us</h2>
+        <img src="images/homepage3.jpg" alt="Contact Us Hero Image">
+        <p class="photo-caption">Have a question or want to book a trip? Fill out the form below and we’ll get back to you!</p>
+    </div>
+
+    <section class="contact-form">
+        <form id="contactForm" onsubmit="return showConfirmation(event)">
+            <fieldset>
+                <legend>Have Questions? Send us a Message!</legend>
+                <table>
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="message">Message:</label></td>
+                        <td><textarea id="message" name="message" rows="4" required></textarea></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Send Message">
+            </fieldset>
+        </form>
+    </section>
+
+    <!-- Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeConfirmationModal()">×</span>
+            <h2>Message Sent</h2>
+            <p id="confirmationMessage"></p>
+        </div>
+    </div>
+
+    <script>
+        function showConfirmation(event) {
+            event.preventDefault(); // Prevent form submission
+            const form = document.getElementById("contactForm");
+            const name = form.querySelector("#name").value;
+            const modal = document.getElementById("confirmationModal");
+            const message = document.getElementById("confirmationMessage");
+            message.innerHTML = `Hey, ${name}. Thank you for your message. We will get back to you as soon as possible.`;
+            modal.style.display = "block";
+            form.reset(); // Clear the form
+            return false;
+        }
+
+        function closeConfirmationModal() {
+            const modal = document.getElementById("confirmationModal");
+            modal.style.display = "none";
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modal = document.getElementById("confirmationModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</main>
+
+<footer>
+    <p>© 2024 River Run Guides. All rights reserved. | <a href="contactus.html">Contact Us</a> | <a href="site-plan.html">Site Plan</a></p>
+</footer>
+
+</body>
+</html>
